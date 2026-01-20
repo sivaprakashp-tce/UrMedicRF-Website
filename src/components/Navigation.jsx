@@ -12,11 +12,11 @@ function Navigation() {
   return (
     <nav className="navigation">
       <div className="nav-brand">
-        <h2>🏥 MediChat</h2>
+        <h2>🏥 UrMedicRF</h2>
       </div>
       <div className="nav-links">
         <Link to="/chat" className={location.pathname === '/chat' ? 'active' : ''}>
-          💬 Chat
+          💬 UrMedicRF
         </Link>
         <Link to="/scheduling" className={location.pathname === '/scheduling' ? 'active' : ''}>
           📅 Schedule

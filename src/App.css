@@ -1,24 +1,27 @@
+
 .app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background: var(--color-bg);
 }
+
 
 .main-content {
   flex: 1;
-  background: #f5f7fa;
+  background: var(--color-header);
   min-height: calc(100vh - 70px);
+  padding: 1em;
 }
 
 * {
   box-sizing: border-box;
 }
 
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -27,16 +30,21 @@ body {
 ::-webkit-scrollbar {
   width: 8px;
 }
-
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: var(--color-header);
 }
-
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: var(--color-primary);
   border-radius: 4px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
+  background: var(--color-btn-hover);
+}
+
+@media (max-width: 600px) {
+  .main-content {
+    padding: 0.5em;
+  }
+}
   background: #555;
 }
