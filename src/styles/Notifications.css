@@ -1,0 +1,179 @@
+.notifications-container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.notifications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.notifications-header h1 {
+  margin: 0;
+  color: #333;
+  font-size: 32px;
+}
+
+.unread-count {
+  margin: 8px 0 0 0;
+  color: #667eea;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.mark-all-btn,
+.clear-all-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.mark-all-btn {
+  background: #667eea;
+  color: white;
+}
+
+.clear-all-btn {
+  background: #f44336;
+  color: white;
+}
+
+.mark-all-btn:hover,
+.clear-all-btn:hover {
+  transform: translateY(-2px);
+}
+
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.no-notifications {
+  text-align: center;
+  padding: 60px 20px;
+  color: #999;
+}
+
+.no-notifications p {
+  font-size: 48px;
+  margin: 0 0 10px 0;
+}
+
+.no-notifications span {
+  font-size: 16px;
+}
+
+.notification-card {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  border-radius: 10px;
+  gap: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.notification-card.unread {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  border-left: 4px solid #667eea;
+}
+
+.notification-card.read {
+  background: #f8f9fa;
+  border-left: 4px solid transparent;
+}
+
+.notification-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateX(5px);
+}
+
+.notification-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-content h3 {
+  margin: 0 0 8px 0;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.notification-content p {
+  margin: 0 0 8px 0;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.notification-time {
+  color: #999;
+  font-size: 12px;
+}
+
+.delete-notification-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(244, 67, 54, 0.1);
+  color: #f44336;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.delete-notification-btn:hover {
+  background: #f44336;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Status-specific styles */
+.notification-card.confirmed {
+  border-left-color: #4caf50;
+}
+
+.notification-card.pending {
+  border-left-color: #ff9800;
+}
+
+.notification-card.cancelled {
+  border-left-color: #f44336;
+}
+
+.notification-card.rescheduled {
+  border-left-color: #2196f3;
+}
+
+.notification-card.reminder {
+  border-left-color: #9c27b0;
+}
